@@ -3,7 +3,13 @@ import Square from "./Square";
 import GameOver from "./GameOver";
 import NewGame from "./NewGame";
 
-export default function Board({ squares, isGameOver, clickHandler, winner }) {
+export default function Board({
+  value,
+  squares,
+  isGameOver,
+  clickHandler,
+  winner,
+}) {
   //console.log("squares: ", squares);
   //console.log(value);
 
@@ -23,7 +29,12 @@ export default function Board({ squares, isGameOver, clickHandler, winner }) {
     <>
       <NewGame isGameOver={isGameOver} />
       <GameOver isGameOver={isGameOver} />
-      <div className="board">{squaresElems}</div>;
+      <div className="board">{squaresElems}</div>
+      {!isGameOver && (
+        <div className="next">
+          Next player is <span className="next-player">{value}</span>
+        </div>
+      )}
     </>
   );
 }
