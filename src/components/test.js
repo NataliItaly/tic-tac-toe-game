@@ -30,11 +30,9 @@ export default function Game() {
       const newSquares = currentSquares.map((sq, i) =>
         e.target.id == i ? value : sq
       );
-      console.log("new squares ", newSquares);
       setStep(historyOfMoves.length);
       setHistoryOfMoves((prev) => [...prev, newSquares]);
       setValue((prev) => (prev === "X" ? "O" : "X"));
-      console.log(historyOfMoves);
       setIsGameOver(newSquares.every((sq) => sq !== ""));
     }
   }

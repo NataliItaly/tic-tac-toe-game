@@ -10,9 +10,6 @@ export default function Board({
   clickHandler,
   winner,
 }) {
-  //console.log("squares: ", squares);
-  //console.log(value);
-
   const squaresElems = squares.map((sq, i) => (
     <Square
       key={i}
@@ -25,16 +22,24 @@ export default function Board({
     </Square>
   ));
 
+  const message = !isGameOver ? (
+    <p>
+      Next is <span className="next-player">{value}</span>
+    </p>
+  ) : winner ? (
+    <p>
+      Winner is <span>{value === "X" ? "O" : "X"}</span>
+    </p>
+  ) : (
+    <p>Drawn game</p>
+  );
+
   return (
     <>
       <NewGame isGameOver={isGameOver} />
       <GameOver isGameOver={isGameOver} />
       <div className="board">{squaresElems}</div>
-      {!isGameOver && (
-        <div className="next">
-          Next player is <span className="next-player">{value}</span>
-        </div>
-      )}
+      <div className="next">{message}</div>
     </>
   );
 }
