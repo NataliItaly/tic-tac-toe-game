@@ -13,7 +13,7 @@ export default function Game() {
   //const [squares, setSquares] = React.useState(Array(9).fill(""));
   const [isGameOver, setIsGameOver] = React.useState(false);
   const winner = calcWinner(historyOfMoves[step]);
-  //console.log("winner", winner);
+  console.log("winner", winner);
   //console.log("step", step);
   //console.log("history current", historyOfMoves[step]);
   //console.log("isGameOver  ", isGameOver);
@@ -27,7 +27,7 @@ export default function Game() {
         setValue("X");
         //const newSquares = historyOfMoves[step].map((sq) => "");
         setStep(0);
-        setHistoryOfMoves([[Array(9).fill("")]]);
+        setHistoryOfMoves([Array(9).fill("")]);
         //setHistoryOfMoves([newSquares]);
       }, 2500);
 
@@ -42,16 +42,16 @@ export default function Game() {
     if (isGameOver) {
       return;
     }
-    console.log(historyOfMoves[step]);
+    //console.log(historyOfMoves[step]);
     const currentSquares = [...historyOfMoves[step]];
-    console.log("current squares1 ", currentSquares);
+    //console.log("current squares1 ", currentSquares);
 
     currentSquares[e.target.id] = value;
     /* const newSquares = currentSquares.map((sq, i) =>
       e.target.id == i ? value : sq
     ); */
-    console.log("current squares2 ", currentSquares);
-    console.log(step);
+    //console.log("current squares2 ", currentSquares);
+    //console.log(step);
     /* const newSquares = squares.map((sq, i) =>
       e.target.id == i ? value : sq
     ); */
