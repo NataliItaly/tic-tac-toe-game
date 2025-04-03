@@ -29,7 +29,7 @@ export default function Game() {
         setStep(0);
         setHistoryOfMoves([Array(9).fill("")]);
         //setHistoryOfMoves([newSquares]);
-      }, 2500);
+      }, 3000);
 
       return () => clearTimeout(timeout);
     }

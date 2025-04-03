@@ -27,20 +27,20 @@ h1 {
 
 .new-game {
   position: absolute;
-  top: 80px;
+  top: 70px;
   left: 50%;
   transform: translateX(-50%);
-  animation: fade 2s ease-in 1s forwards;
 }
 
 .new-game-title {
   text-align: center;
   color: #efd6b4;
   font-size: 44px;
+  text-transform: uppercase;
   letter-spacing: 5px;
   display: flex;
-  animation: fade 2s ease-in 1s forwards;
-  -webkit-animation: fade 2s ease-in 1s forwards;
+  animation: fade 1.2s ease-in 1.5s forwards;
+  -webkit-animation: fade 1.2s ease-in 1.5s forwards;
 }
 
 .new-game-title span {
@@ -81,10 +81,9 @@ h1 {
 }
 
 .game-over {
-  height: 60px;
   position: absolute;
   display: flex;
-  top: 80px;
+  top: 100px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -97,16 +96,17 @@ h1 {
   color: #efd6b4;
   font-size: 44px;
   letter-spacing: 5px;
+  text-transform: uppercase;
   display: flex;
   justify-content: center;
   margin-top: 0;
-  animation: appear 1s ease-in, fade 0.5s ease-in 3.5s forwards;
-  -webkit-animation: appear 1s ease-in, fade 0.5s ease-in 3.5s forwards;
+  animation: appear 0.5s ease-in, fade 0.5s ease-in 2s forwards;
+  -webkit-animation: appear 0.5s ease-in, fade 0.5s ease-in 2s forwards;
 }
 
 .game-over-title span {
   animation: jump 1s ease-in;
-  -webkit-animation: jump 0.5s ease-in 1.2s;
+  -webkit-animation: jump 0.4s ease-in 1.2s;
 }
 
 .game-over-title span:nth-child(2) {
