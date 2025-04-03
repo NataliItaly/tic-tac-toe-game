@@ -1,12 +1,12 @@
 import { useState } from "react";
 import "./App.css";
-import Board from "./components/Board";
+import Game from "./components/Game";
 
 function App() {
   return (
     <>
       <h1>Tic Tac Toe Game</h1>
-      <Board />
+      <Game />
     </>
   );
 }
