@@ -28,7 +28,7 @@ export default function Board({
     </p>
   ) : winner ? (
     <p>
-      Winner is <span>{value === "X" ? "O" : "X"}</span>
+      Winner is <span className="next-player">{value === "X" ? "O" : "X"}</span>
     </p>
   ) : (
     <p>Drawn game</p>

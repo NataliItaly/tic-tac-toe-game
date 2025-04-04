@@ -16,7 +16,7 @@ export default function Square({
       className={classes}
       id={id}
       onClick={(e) => clickHandler(e)}
-      disabled={children.length > 0 || isGameOver}
+      disabled={children.length > 0}
     >
       {children}
     </button>

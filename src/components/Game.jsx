@@ -52,6 +52,8 @@ export default function Game() {
   function handleHistory(e) {
     const currentStep = e.target.dataset.history;
     const currentMove = historyOfMoves[currentStep];
+    console.log(currentStep);
+    setStep(currentStep);
     console.log(currentMove);
     return currentMove;
   }
@@ -60,7 +62,7 @@ export default function Game() {
     <div className="game">
       <Board
         value={value}
-        squares={historyOfMoves[historyOfMoves.length - 1]}
+        squares={historyOfMoves[step]}
         clickHandler={clickHandler}
         isGameOver={isGameOver}
         winner={winner}
@@ -69,6 +71,7 @@ export default function Game() {
         historyOfMoves={historyOfMoves}
         handleHistory={handleHistory}
         winner={winner}
+        step={step}
       />
     </div>
   );

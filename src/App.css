@@ -40,7 +40,11 @@ h1 {
   position: absolute;
   top: 70px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-210px);
+  -webkit-transform: translateX(-210px);
+  -moz-transform: translateX(-210px);
+  -ms-transform: translateX(-210px);
+  -o-transform: translateX(-210px);
 }
 
 .new-game-title {
@@ -96,10 +100,14 @@ h1 {
   display: flex;
   top: 100px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-210px);
   display: flex;
   flex-direction: column;
   align-items: center;
+  -webkit-transform: translateX(-210px);
+  -moz-transform: translateX(-210px);
+  -ms-transform: translateX(-210px);
+  -o-transform: translateX(-210px);
 }
 
 .game-over-title {
@@ -256,7 +264,7 @@ h1 {
   grid-row: 2;
   grid-column: 1;
   text-align: center;
-  color: var(--main-color);
+  color: #efa29a;
   font-size: 24px;
 }
 
@@ -266,7 +274,6 @@ h1 {
 }
 
 .next-player {
-  color: #fff;
   font-size: 28px;
   line-height: 40px;
   border: 1px solid var(--main-color);
